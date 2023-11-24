@@ -1,0 +1,1 @@
+//to save the blog posts themselves
