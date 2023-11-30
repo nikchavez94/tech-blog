@@ -1,1 +1,28 @@
-//this is to save the comments that the user is writing - belongs to a specific user and that it goes to a specific blog post (by post id/user id)
+const {Model, DataTypes} = require('sequelize');
+const sequelize = require('../config/connection');
+
+class Comment extends Model{}
+
+Comment.init(
+    {
+        id:{
+            type: DataTypes.INTEGER,
+            allowNull: false,
+            autoIncrement: true,
+            primaryKey: true,
+        },
+               
+        content: {
+            type: DataTypes.TEXT, 
+            allowNull: false,
+    },
+    
+    },
+    {
+        sequelize,
+        timestamps: false,
+        freezeTableName: true,
+        underscored: true,
+        modelName: "comment",
+    },
+)
