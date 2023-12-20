@@ -1,0 +1,17 @@
+<section class="home"> 
+    {{#each blogs as |blog| }}
+
+    <header class="homeHeader">
+        <h1>hello: {{blog.user.userName}}</h1>
+    </header>
+    <div class="blogcontent">
+            <div>
+                <h3>{{blog.title}}</h3>
+            </div>
+            <div>
+                {{blog.content}}
+            </div>
+       
+    </div> 
+    {{/each}}
+</section>
